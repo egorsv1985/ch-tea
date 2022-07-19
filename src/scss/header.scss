@@ -1,0 +1,18 @@
+.header {
+ 
+  // .header__wrapper
+  &__wrapper {
+    @include flex(space-between);
+  }
+  // .header__burger
+  &__burger {
+  }
+  // .header__nav
+  &__nav {
+    
+  }
+  // .header__logo
+  &__logo {
+   
+  }
+}

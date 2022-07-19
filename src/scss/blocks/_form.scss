@@ -1,0 +1,112 @@
+.form {
+  @include flex($flex-direction: column);
+  gap: 20px;
+  @include media(min, lg) {
+    gap: 30px;
+  }
+
+  // .form__box
+  &__box {
+    position: relative;
+  }
+
+  // .form__wrap
+  &__wrap {
+    @include flex($flex-direction: column);
+  }
+
+  // .form__input
+  &__input {
+    @include wh(100%, 44px);
+
+    font-weight: 350;
+    font-size: 17px;
+    line-height: 140%;
+
+    color: #333;
+
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    background-color: transparent;
+
+    &:focus-visible,
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 1px solid #808080;
+    }
+
+    &:focus ~ .form__label,
+    &:valid ~ .form__label {
+      opacity: 0;
+    }
+  }
+
+  // .form__label
+  &__label {
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #333;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    opacity: 1;
+
+    transition: 0.5s;
+    @include media(min, lg) {
+      font-size: 17px;
+    }
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #333;
+
+    @include media(min, lg) {
+      font-size: 17px;
+    }
+  }
+  // .form__inner
+  &__inner {
+    @include flex(space-between, center);
+    margin-top: 4px;
+    @include media(min, lg) {
+      margin-top: 26px;
+    }
+  }
+
+  // .form__btn
+  &__btn {
+    width: 210px;
+
+    background: #000000;
+    border-radius: 50px;
+
+    font-weight: 400;
+
+    color: $mainColor;
+    @include media(min, lg) {
+      width: 168px;
+    }
+  }
+
+  // .form__text
+  &__text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+
+ 
+    max-width: 240px;
+    @include media(min, lg) {
+      font-size: 12px;
+      max-width: 355px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<svg width="32" height="60" viewBox="0 0 32 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_48_402)">
+<rect y="31" width="3" height="3" transform="rotate(-90 0 31)" fill="white"/>
+<rect x="4" y="31" width="3" height="3" transform="rotate(-90 4 31)" fill="white"/>
+<rect x="4" y="35" width="3" height="3" transform="rotate(-90 4 35)" fill="white"/>
+<rect x="8" y="35" width="3" height="3" transform="rotate(-90 8 35)" fill="white"/>
+<rect x="16" y="35" width="3" height="3" transform="rotate(-90 16 35)" fill="white"/>
+<rect x="12" y="31" width="3" height="3" transform="rotate(-90 12 31)" fill="white"/>
+<rect x="8" y="39" width="3" height="3" transform="rotate(-90 8 39)" fill="white"/>
+<rect x="16" y="39" width="3" height="3" transform="rotate(-90 16 39)" fill="white"/>
+<rect x="12" y="39" width="3" height="3" transform="rotate(-90 12 39)" fill="white"/>
+<rect x="12" y="43" width="3" height="3" transform="rotate(-90 12 43)" fill="white"/>
+<rect x="4" y="27" width="3" height="3" transform="rotate(-90 4 27)" fill="white"/>
+<rect x="8" y="27" width="3" height="3" transform="rotate(-90 8 27)" fill="white"/>
+<rect x="16" y="27" width="3" height="3" transform="rotate(-90 16 27)" fill="white"/>
+<rect x="8" y="23" width="3" height="3" transform="rotate(-90 8 23)" fill="white"/>
+<rect x="16" y="23" width="3" height="3" transform="rotate(-90 16 23)" fill="white"/>
+<rect x="12" y="23" width="3" height="3" transform="rotate(-90 12 23)" fill="white"/>
+<rect x="12" y="19" width="3" height="3" transform="rotate(-90 12 19)" fill="white"/>
+<rect x="27" y="28" width="3" height="3" transform="rotate(90 27 28)" fill="white"/>
+<rect x="23" y="28" width="3" height="3" transform="rotate(90 23 28)" fill="white"/>
+<rect x="23" y="24" width="3" height="3" transform="rotate(90 23 24)" fill="white"/>
+<rect x="23" y="32" width="3" height="3" transform="rotate(90 23 32)" fill="white"/>
+<rect x="20" y="11" width="3" height="3" transform="rotate(-90 20 11)" fill="white"/>
+<rect x="24" y="11" width="3" height="3" transform="rotate(-90 24 11)" fill="white"/>
+<rect x="24" y="15" width="3" height="3" transform="rotate(-90 24 15)" fill="white"/>
+<rect x="28" y="15" width="3" height="3" transform="rotate(-90 28 15)" fill="white"/>
+<rect x="28" y="19" width="3" height="3" transform="rotate(-90 28 19)" fill="white"/>
+<rect x="24" y="7" width="3" height="3" transform="rotate(-90 24 7)" fill="white"/>
+<rect x="28" y="7" width="3" height="3" transform="rotate(-90 28 7)" fill="white"/>
+<rect x="28" y="3" width="3" height="3" transform="rotate(-90 28 3)" fill="white"/>
+<rect x="20" y="51" width="3" height="3" transform="rotate(-90 20 51)" fill="white"/>
+<rect x="24" y="51" width="3" height="3" transform="rotate(-90 24 51)" fill="white"/>
+<rect x="24" y="55" width="3" height="3" transform="rotate(-90 24 55)" fill="white"/>
+<rect x="28" y="55" width="3" height="3" transform="rotate(-90 28 55)" fill="white"/>
+<rect x="28" y="59" width="3" height="3" transform="rotate(-90 28 59)" fill="white"/>
+<rect x="24" y="47" width="3" height="3" transform="rotate(-90 24 47)" fill="white"/>
+<rect x="28" y="47" width="3" height="3" transform="rotate(-90 28 47)" fill="white"/>
+<rect x="28" y="43" width="3" height="3" transform="rotate(-90 28 43)" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_48_402">
+<rect width="60" height="32" fill="white" transform="translate(0 60) rotate(-90)"/>
+</clipPath>
+</defs>
+</svg>

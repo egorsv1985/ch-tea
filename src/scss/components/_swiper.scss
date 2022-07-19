@@ -1,0 +1,68 @@
+.swiper {
+  position: relative;
+  margin-left: 10px;
+  @include media(min, lg) {
+    margin-left: 120px;
+  }
+  // .swiper__slide
+  &__item {
+    height: 266px;
+
+    @include media(min, lg) {
+      height: 600px;
+    }
+  }
+
+  // .swiper__img
+  &__img {
+    width: 100%;
+    height: 266px;
+    @include media(min, lg) {
+      height: 600px;
+    }
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  @include background(url("@img/icons/arrow-slider.svg"));
+  @include wh(20px, 8px);
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev {
+}
+
+.swiper-button-disabled {
+}
+
+.swiper-button-prev.swiper-button-disabled {
+}
+
+.swiper-button-next.swiper-button-disabled {
+}
+.tasksSwiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.swiper-pagination {
+  @include flex(center, center);
+  gap: 10px;
+  font-family: "Stem";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+
+  color: #333;
+  @include media(min, lg) {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
