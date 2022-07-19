@@ -39,28 +39,28 @@ flsFunctions.menuInit();
 Документация:
 Сниппет (HTML): spollers
 */
-flsFunctions.spollers();
+// flsFunctions.spollers();
 
 /*
 Модуль работы с табами
 Документация:
 Сниппет (HTML): tabs
 */
-flsFunctions.tabs();
+// flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
 Документация по работе в шаблоне:
 Сниппет (HTML): showmore
 */
-flsFunctions.showMore();
+// flsFunctions.showMore();
 
 /*
 Попапы
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-import "./libs/popup.js";
+// import "./libs/popup.js";
 
 /*
 Модуль параллакса мышью
@@ -128,7 +128,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
@@ -154,10 +154,10 @@ import "./files/sliders.js";
 // import './libs/watcher.js'
 
 // Функции работы скроллом
-import * as flsScroll from "./files/scroll/scroll.js";
+// import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
-flsScroll.pageNavigation();
+// flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // flsScroll.headerScroll();
@@ -253,8 +253,8 @@ video.addEventListener("timeupdate", function () {
 window.onload = function () {
   MaskedInput({
     elm: document.getElementById("tel"), // select only by id
-    format: "+7 (__) ___-__-__",
-    separator: "+7 ()-",
+    format: "+38 ___ ___ _ ___",
+    separator: "+38 ()-",
   });
 };
 
