@@ -1,0 +1,65 @@
+.discount {
+  position: relative;
+  top: -580px;
+  padding: 60px 0 80px;
+
+
+  &::before {
+    @include pseudo;
+    @include wh(82%, 23px);
+    @include background(url("@img/icons/decor_line.svg"));
+    @include pos(absolute, $bottom: 0, $left: 0);
+  }
+  &::after {
+    @include pseudo;
+    @include wh(82%, 100%);
+    @include pos(absolute, $bottom: 0, $left: 0);
+
+    background-color: $accentColor;
+    background-blend-mode: soft-light, normal;
+    z-index: -1;
+  }
+  // .discount__wrapper
+  &__wrapper {
+    @include flex($flex-direction: column);
+	gap: 40px;
+	padding-right: 100px;
+  }
+  // .discount__box-content
+  &__box-content {
+    @include flex(space-between);
+	
+  }
+  // .discount__title
+  &__title {
+    font-family: "Mak";
+
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #fff;
+
+    max-width: 365px;
+    position: relative;
+    &::before {
+      @include pseudo;
+      @include wh(32px, 60px);
+      @include background(url("@img/icons/decor-white.svg"));
+      @include pos(absolute, $top: 18%, $left: -60px);
+    }
+  }
+  // .discount__text
+  &__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+
+    color: #fff;
+	max-width: 400px;
+	align-self: flex-end;
+  }
+  // .discount__form
+  &__form {
+  }
+}

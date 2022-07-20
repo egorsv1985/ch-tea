@@ -1,19 +1,96 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	// .form__input
-	&__input {}
-	// .form__label
-	&__label {}
-	// .form__box
-	&__box {}
-	// .form__inner
-	&__inner {}
-	// .form__btn
-	&__btn {}
-	// .form__text
-	&__text {}
+  @include flex(space-between, center);
+  gap: 20px;
+
+  // .form__wrap
+  &__wrap {
+    @include flex($flex-direction: column);
+    position: relative;
+    width: 76%;
+    padding-bottom: 20px;
+  }
+
+  // .form__input
+  &__input {
+    border-bottom: 1px solid #fff;
+
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #fff;
+
+    @include wh(100%, 80px);
+
+    position: relative;
+    caret-color: #dc7474;
+    background-color: transparent;
+
+    &:focus-visible,
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 1px solid #fff;
+    }
+
+    &:focus ~ .form__label,
+    &:valid ~ .form__label {
+      top: -30px;
+    }
+  }
+
+  // .form__label
+  &__label {
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #fff;
+    position: absolute;
+    top: 12px;
+    left: 0;
+
+    transition: 0.5s;
+  }
+
+  &__input::placeholder {
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #fff;
+  }
+
+  // .form__btn
+  &__btn {
+    @include wh(220px);
+
+    border-radius: 50%;
+    @include flex(center, center);
+    background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
+
+    font-family: "TenorSans";
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+  }
+  // .form__span
+  &__span {
+    color: rgba(255, 255, 255, 0.4);
+  }
 }
+
 //</FORM>
 
 // <BUTTONS>

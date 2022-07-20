@@ -1,0 +1,93 @@
+.feedback {
+  position: relative;
+  top: -580px;
+  padding: 60px 0 80px;
+
+  // .feedback__wrapper
+  &__wrapper {
+	position: relative;
+    @include flex(space-between, center);
+    background-color: $accentColor;
+    padding: 55px 60px 80px 125px;
+  }
+  // .feedback__inner
+  &__inner {
+	@include flex($flex-direction: column);
+	gap: 40px;
+
+  }
+  // .feedback__box-content
+  &__box-content {
+    @include flex($flex-direction: column);
+	gap: 40px;
+  }
+  // .feedback__title
+  &__title {
+    font-family: "Mak";
+
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #fff;
+
+    max-width: 365px;
+
+    position: relative;
+    &::before {
+      @include pseudo;
+      @include wh(32px, 60px);
+      @include background(url("@img/icons/decor-white.svg"));
+      @include pos(absolute, $top: 18%, $left: -60px);
+    }
+  }
+  // .feedback__text
+  &__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+
+    color: #fff;
+	max-width: 435px;
+	
+  }
+  // .feedback__span
+  &__span {
+    font-weight: 700;
+  }
+  // .feedback__form
+  &__form {
+    .form__btn {
+      @include wh(275px, 60px);
+      @include flex(center, center);
+
+      background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
+      border-radius: 1000px;
+
+      font-size: 17px;
+      line-height: 20px;
+    }
+    .form__label {
+      font-size: 32px;
+      line-height: 37px;
+	  top: 0;
+    }
+	.form__input{
+		height: 55px;
+		font-size: 32px;
+      line-height: 37px;
+	  max-width: 306px;
+	}
+	.form__wrap{
+		width: unset;
+		padding-bottom: unset;
+	}
+  }
+  // .feedback__box-img
+  &__box-img {
+	@include pos (absolute, $top: -70px, $right: 70px);
+  }
+  // .feedback__img
+  &__img {
+  }
+}
