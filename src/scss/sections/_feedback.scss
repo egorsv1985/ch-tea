@@ -1,25 +1,24 @@
 .feedback {
   position: relative;
-  top: -580px;
+
   padding: 60px 0 80px;
 
   // .feedback__wrapper
   &__wrapper {
-	position: relative;
+    position: relative;
     @include flex(space-between, center);
     background-color: $accentColor;
     padding: 55px 60px 80px 125px;
   }
   // .feedback__inner
   &__inner {
-	@include flex($flex-direction: column);
-	gap: 40px;
-
+    @include flex($flex-direction: column);
+    gap: 40px;
   }
   // .feedback__box-content
   &__box-content {
     @include flex($flex-direction: column);
-	gap: 40px;
+    gap: 40px;
   }
   // .feedback__title
   &__title {
@@ -48,8 +47,7 @@
     line-height: 31px;
 
     color: #fff;
-	max-width: 435px;
-	
+    max-width: 435px;
   }
   // .feedback__span
   &__span {
@@ -70,22 +68,22 @@
     .form__label {
       font-size: 32px;
       line-height: 37px;
-	  top: 0;
+      top: 0;
     }
-	.form__input{
-		height: 55px;
-		font-size: 32px;
+    .form__input {
+      height: 55px;
+      font-size: 32px;
       line-height: 37px;
-	  max-width: 306px;
-	}
-	.form__wrap{
-		width: unset;
-		padding-bottom: unset;
-	}
+      max-width: 306px;
+    }
+    .form__wrap {
+      width: unset;
+      padding-bottom: unset;
+    }
   }
   // .feedback__box-img
   &__box-img {
-	@include pos (absolute, $top: -70px, $right: 70px);
+    @include pos(absolute, $top: -70px, $right: 70px);
   }
   // .feedback__img
   &__img {

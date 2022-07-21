@@ -10,6 +10,9 @@
       width: unset;
     }
     @include media (max, lg) {
+      gap: 40px;
+    }
+    @include media (max, md){
       display: none;
     }
   }
@@ -34,8 +37,12 @@
       transform-origin: right;
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
+      @include media (max, md){
+        bottom: -10px;
+      }
     }
-    &:hover {
+    &:hover,
+    &:focus {
       &::before {
         transform-origin: left;
         transform: scaleX(1);
@@ -69,10 +76,16 @@
   &--left {
   }
   &--right {
+    @include media (max, md){
+      display: none;
+    }
     .nav__list {
       justify-content: flex-end;
       gap: 110px;
       padding-right: 15px;
+      @include media(max, lg){
+        gap: 40px;
+      }
      
     }
   }
