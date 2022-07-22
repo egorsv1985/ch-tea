@@ -40,7 +40,11 @@
   }
   // .recommendations__list
   &__list {
-    @include flex($flex-wrap: wrap);
+    @include flex(center, $flex-wrap: wrap);
+    @include media (max, 630px){
+      gap: 40px;
+    }
+    
   }
   // .recommendations__item
   &__item {
@@ -50,8 +54,14 @@
     border: 1px solid #dfc181;
 
     padding: 20px;
+    @include media (max, 630px){
+      height: 240px;
+    }
     &:nth-child(even) {
       margin-top: 40px;
+      @include media (max, 630px){
+        margin-top: unset;
+      }
     }
   }
 
