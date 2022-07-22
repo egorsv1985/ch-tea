@@ -3,7 +3,7 @@
 .form {
   @include flex(space-between, center);
   gap: 20px;
-  @include media(max, 1060px){
+  @include media(max, 1160px){
 	flex-direction: column;
   }
 
