@@ -55,12 +55,15 @@
     margin: 20px 0;
     @include media(max, xl) {
       font-size: 100px;
+      line-height: 100%;
     }
     @include media(max, lg) {
       font-size: 80px;
+      line-height: 100%;
     }
     @include media(max, sm) {
       font-size: 60px;
+      line-height: 100%;
     }
   }
 
@@ -99,7 +102,7 @@
     z-index: 1;
 
     @include pos(absolute, $top: -14%, $right: 9%);
-   
+
     @include media(max, lg) {
       @include wh(190px);
       font-size: 16px;
