@@ -1,13 +1,13 @@
 .choose {
   position: relative;
- 
-  padding: 180px 0 100px;
-  &::before{
-	@include pseudo;
-	@include wh(100%, 23px);
-	@include background (url("@img/icons/decor_line2.svg"));
-	@include pos(absolute, $bottom:0, $left:0);
-}
+
+  padding: 180px 0 145px;
+  &::before {
+    @include pseudo;
+    @include wh(100%, 23px);
+    @include background(url("@img/icons/decor_line2.svg"));
+    @include pos(absolute, $bottom: 0, $left: 0);
+  }
   // .choose__wrapper
   &__wrapper {
     @include flex($flex-direction: column);
@@ -39,99 +39,200 @@
       background-color: $accentColor;
       @include pos(absolute, $bottom: -70px, $left: 50%);
       transform: translateX(-50%);
-
     }
   }
   // .choose__title-span
   &__title-span {
     color: $accentColor;
   }
-  // .choose__grid
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-	gap: 20px;
-  }
-  // .choose__box-left
-  &__box-left {
-  }
+
   // .choose__list
   &__list {
-	@include flex ($flex-direction: column);
-	gap: 40px;
-	
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "item1 img item5"
+      "item2 img item6"
+      "item3 img item7";
+    row-gap: 40px;
+    column-gap: 16px;
+    align-items: center;
+    @include media(max, xl) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "item1 item2 item3"
+        "img img img"
+        "item5 item6 item7";
+      justify-items: center;
+    }
+
+    @include media(max, md) {
+      grid-template-areas:
+        "item1 item2"
+        "item3 item5"
+        " item6 item7";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(max, sm) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item5"
+        "item6"
+        "item7";
+    }
   }
   // .choose__item
   &__item {
-	position: relative;
-	@include flex ($flex-direction: column);
-	gap: 20px;
-	padding-top: 50px;
-	&::before{
-		@include pseudo;
-		@include wh(40px);
-		@include pos(absolute, $top:-10px, $left:6px);
-		
-		
-	}
-	&1::before{
-		@include background (url("@img/icons/dec1.svg"));
-	}
-	&2::before{
-		@include background (url("@img/icons/dec2.svg"));
-	}
-	&3::before{
-		@include background (url("@img/icons/dec3.svg"));
-	}
-	&4::before{
-		@include background (url("@img/icons/dec4.svg"));
-	}
-	&5::before{
-		@include background (url("@img/icons/dec5.svg"));
-	}
-	&6::before{
-		@include background (url("@img/icons/dec6.svg"));
-	}
+    position: relative;
+    @include flex($flex-direction: column);
+    gap: 20px;
+    padding-top: 50px;
+    height: 100%;
+    @include media(max, sm) {
+      max-width: 300px;
+    }
+    &::before {
+      @include pseudo;
+      @include wh(40px);
+      @include pos(absolute, $top: -10px, $left: 6px);
+    }
+    &1 {
+      grid-area: item1;
+      &::before {
+        @include background(url("@img/icons/dec1.svg"));
+      }
+    }
+    &2 {
+      grid-area: item2;
+      &::before {
+        @include background(url("@img/icons/dec2.svg"));
+      }
+    }
+    &3 {
+      grid-area: item3;
+      &::before {
+        @include background(url("@img/icons/dec3.svg"));
+      }
+    }
+    &4 {
+      grid-area: img;
+      padding-top: 0;
+      height: unset;
+      @include media(max, md) {
+        display: none;
+      }
+    }
+    &5 {
+      grid-area: item5;
+      &::before {
+        @include background(url("@img/icons/dec4.svg"));
+      }
+    }
+    &6 {
+      grid-area: item6;
+
+      &::before {
+        @include background(url("@img/icons/dec5.svg"));
+      }
+    }
+    &7 {
+      grid-area: item7;
+
+      &::before {
+        @include background(url("@img/icons/dec6.svg"));
+      }
+    }
   }
   // .choose__subtitle
   &__subtitle {
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
 
-
-font-family: "TenorSans";
-font-weight: 400;
-font-size: 21px;
-line-height: 120%;
-
-
-color: $mainColor;
-
-
+    color: $mainColor;
   }
   // .choose__text
   &__text {
-	
-font-weight: 350;
-font-size: 16px;
-line-height: 24px;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 24px;
 
-color: $mainColor;
-max-width: 290px;
-
+    color: $mainColor;
+    max-width: 290px;
   }
   // .choose__span
   &__span {
-	font-weight: 700;
-	color: $accentColor;
+    font-weight: 700;
+    color: $accentColor;
   }
   // .choose__center
   &__center {
     grid-area: 1 / 2 / 4 / 3;
-	padding-top: 80px;
+    padding-top: 80px;
+  }
+  // .choose__img
+  &__img {
+    max-height: 625px;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+  }
+  // .choose__box-right
+  &__box-right {
+  }
+}
+
+.choose {
+  // .choose__wrapper
+  &__wrapper {
+  }
+  // .choose__title
+  &__title {
+  }
+  // .choose__title-span
+  &__title-span {
+  }
+  // .choose__grid
+  &__grid {
+  }
+  // .choose__list
+  &__list {
+  }
+  // .choose__item
+  &__item {
+  }
+  // .choose__item1
+  &__item1 {
+  }
+  // .choose__subtitle
+  &__subtitle {
+  }
+  // .choose__text
+  &__text {
+  }
+  // .choose__span
+  &__span {
+  }
+  // .choose__item2
+  &__item2 {
+  }
+  // .choose__item3
+  &__item3 {
   }
   // .choose__img
   &__img {
   }
-  // .choose__box-right
-  &__box-right {
+  // .choose__item4
+  &__item4 {
+  }
+  // .choose__item5
+  &__item5 {
+  }
+  // .choose__item6
+  &__item6 {
   }
 }
