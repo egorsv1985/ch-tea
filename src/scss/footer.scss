@@ -18,6 +18,8 @@
   // .footer__top
   &__top {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   // .footer__box-logo
   &__box-logo {
@@ -25,6 +27,9 @@
     align-self: flex-start;
     gap: 20px;
     width: 42%;
+    @include media (max, lg) {
+      width: unset;
+    }
   }
 
   // .footer__logo
@@ -68,6 +73,9 @@
     gap: 20px;
     margin-top: 25px;
     margin-right: 7%;
+    @include media (max, lg) {
+      margin-right: unset;
+    }
     .footer__list {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
