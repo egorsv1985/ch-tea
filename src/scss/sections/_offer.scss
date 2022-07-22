@@ -1,75 +1,40 @@
 .offer {
   position: relative;
- 
+
   padding: 180px 0 60px;
-  // .offer__wrapper
-  &__wrapper {
-    @include flex($flex-direction: column);
+  @include media(max, lg) {
+    padding: 90px 0 30px;
   }
   // .offer__title
   &__title {
-    font-family: "Mak";
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: center;
-
-    color: $mainColor;
-
     max-width: 610px;
     margin: 0 auto 100px;
     position: relative;
+    @include media(max, lg) {
+      margin-bottom: 50px;
+    }
+  }
 
-    &::before {
-      @include pseudo;
-      @include wh(60px, 32px);
-      @include background(url("@img/icons/decor.svg"));
-      @include pos(absolute, $top: -60px, $left: 50%);
-      transform: translateX(-50%);
-    }
-    &::after {
-      @include pseudo;
-      @include wh(100px, 1px);
-      background-color: $accentColor;
-      @include pos(absolute, $bottom: -40px, $left: 50%);
-      transform: translateX(-50%);
-    }
-  }
-  // .offer__span-title
-  &__span-title {
-    color: $accentColor;
-  }
   // .offer__wrap
   &__wrap {
     @include flex(space-between, center, wrap);
 
-	gap: 15px;
-	@include media (max, xl){
-		justify-content: center;
-	}
-	
+    gap: 15px;
+    @include media(max, xl) {
+      justify-content: center;
+    }
   }
-  // .offer__box-img
-  &__box-img {
-  }
-  // .offer__img
-  &__img {
-  }
+
   // .offer__box-content
   &__box-content {
     @include flex($flex-direction: column);
-	gap: 40px;
-	max-width: 640px;
+    gap: 40px;
+    max-width: 640px;
   }
   // .offer__subtitle
   &__subtitle {
-    font-family: "TenorSans";
-    font-weight: 400;
     font-size: 36px;
     line-height: 42px;
-
-    color: $mainColor;
-
   }
   // .offer__span-subtitle
   &__span-subtitle {
@@ -77,20 +42,7 @@
     font-weight: 700;
     font-family: "Mak";
   }
-  // .offer__text
-  &__text {
-    font-weight: 350;
-    font-size: 21px;
-    line-height: 150%;
 
-    color: $mainColor;
-
-	
-  }
-  // .offer__span
-  &__span {
-    color: $accentColor;
-  }
   // .offer__btn
   &__btn {
     @include wh(220px);
@@ -108,6 +60,19 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #fff;
+    color: $primaryColor;
+    @include media(max, lg) {
+      @include wh(190px);
+      font-size: 16px;
+    }
+    @include media(max, md) {
+      @include wh(150px);
+      font-size: 14px;
+    }
+    @include media(max, sm) {
+      @include wh(100px);
+      padding: 10px;
+      font-size: 12px;
+    }
   }
 }

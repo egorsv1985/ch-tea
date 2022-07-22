@@ -24,7 +24,7 @@
   padding: 0 10px;
   margin: 0 auto;
 
-  @include media(min, lg) {
+  @include media(max, lg) {
     padding: 0 20px;
   }
 }

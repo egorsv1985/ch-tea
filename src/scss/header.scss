@@ -2,18 +2,10 @@
  
   // .header__wrapper
   &__wrapper {
-    @include flex(space-between);
+    @include flex(space-between, center, wrap, row);
     @include media(max, md) {
       align-items: center;
     }
   }
-  // .header__burger
-  &__burger {
-  }
-  // .header__nav
-  &__nav {
-  }
-  // .header__logo
-  &__logo {
-  }
+ 
 }

@@ -3,8 +3,8 @@
 .form {
   @include flex(space-between, center);
   gap: 20px;
-  @include media(max, 1160px){
-	flex-direction: column;
+  @include media(max, 1160px) {
+    flex-direction: column;
   }
 
   // .form__wrap
@@ -31,6 +31,15 @@
     position: relative;
     caret-color: #dc7474;
     background-color: transparent;
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 35px;
+      height: 60px;
+    }
+    @include media(max, sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
 
     &:focus-visible,
     &:focus,
@@ -42,6 +51,12 @@
     &:focus ~ .form__label,
     &:valid ~ .form__label {
       top: -30px;
+      @include media(max, lg) {
+        top: -20px;
+      }
+      @include media(max, sm) {
+        top: -10px;
+      }
     }
   }
 
@@ -58,6 +73,14 @@
     left: 0;
 
     transition: 0.5s;
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    @include media(max, sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__input::placeholder {
@@ -66,7 +89,15 @@
     font-size: 40px;
     line-height: 47px;
 
-    color: #fff;
+    color: $primaryColor;
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    @include media(max, sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   // .form__btn
@@ -86,7 +117,20 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #fff;
+    color: $primaryColor;
+    @include media(max, lg) {
+      @include wh(190px);
+      font-size: 16px;
+    }
+    @include media(max, md) {
+      @include wh(150px);
+      font-size: 14px;
+    }
+    @include media(max, sm) {
+      @include wh(100px);
+      padding: 10px;
+      font-size: 12px;
+    }
   }
   // .form__span
   &__span {

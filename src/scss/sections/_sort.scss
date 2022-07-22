@@ -1,11 +1,11 @@
 .sort {
   position: relative;
   padding: 120px 0 60px;
- 
-  // .sort__wrapper
-  &__wrapper {
-    @include flex($flex-direction: column);
+  @include media (max, lg) {
+    padding: 60px 30px;
   }
+ 
+ 
   // .sort__box-content
   &__box-content {
     @include flex(space-between, center);
@@ -68,12 +68,7 @@
   }
   // .sort__title
   &__title {
-    font-family: "Mak";
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-
-    color: $mainColor;
+  text-align: left;
     max-width: 465px;
 
     position: relative;
@@ -98,11 +93,10 @@
   }
   // .sort__text
   &__text {
-    font-weight: 350;
+  
     font-size: 18px;
     line-height: 150%;
 
-    color: $mainColor;
     max-width: 560px;
     @include media(max, xl){
       text-align: center;
@@ -119,16 +113,7 @@
     }
   }
 
-  // .sort__span
-  &__span {
-    font-weight: 700;
-    color: $accentColor;
-    &-subtitle {
-    }
-
-    &-text {
-    }
-  }
+ 
 
   // .sort__box-img
   &__box-img {
@@ -164,12 +149,10 @@
   }
   // .sort__subtitle
   &__subtitle {
-    font-family: TenorSans;
-    font-weight: 400;
+   
     font-size: 24px;
     line-height: 28px;
 
-    color: $mainColor;
     margin-bottom: 25px;
   }
 
@@ -188,7 +171,11 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: $primaryColor;
     margin-top: 30px;
+    @include media(max, xl){
+      margin-bottom: 50px;
+
+    }
   }
 }

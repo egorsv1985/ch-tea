@@ -8,42 +8,17 @@
     @include background(url("@img/icons/decor_line2.svg"));
     @include pos(absolute, $bottom: 0, $left: 0);
   }
-  // .choose__wrapper
-  &__wrapper {
-    @include flex($flex-direction: column);
+  @include media(max, lg){
+    padding: 100px 0 60px;
   }
+
   // .choose__title
   &__title {
-    font-family: "Mak";
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: center;
-
-    color: $mainColor;
-
     max-width: 465px;
     margin: 0 auto 100px;
-    position: relative;
-
-    &::before {
-      @include pseudo;
-      @include wh(60px, 32px);
-      @include background(url("@img/icons/decor.svg"));
-      @include pos(absolute, $top: -60px, $left: 50%);
-      transform: translateX(-50%);
+    @include media(max, lg) {
+      margin-bottom: 50px;
     }
-    &::after {
-      @include pseudo;
-      @include wh(100px, 1px);
-      background-color: $accentColor;
-      @include pos(absolute, $bottom: -70px, $left: 50%);
-      transform: translateX(-50%);
-    }
-  }
-  // .choose__title-span
-  &__title-span {
-    color: $accentColor;
   }
 
   // .choose__list
@@ -92,7 +67,7 @@
     padding-top: 50px;
     height: 100%;
     @include media(max, sm) {
-      max-width: 300px;
+      max-width: 100%;
     }
     &::before {
       @include pseudo;
@@ -146,93 +121,20 @@
       }
     }
   }
-  // .choose__subtitle
-  &__subtitle {
-    font-family: "TenorSans";
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 120%;
 
-    color: $mainColor;
-  }
   // .choose__text
   &__text {
-    font-weight: 350;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: $mainColor;
     max-width: 290px;
+    @include media(max, lg) {
+      max-width: 100%;
+    }
   }
-  // .choose__span
-  &__span {
-    font-weight: 700;
-    color: $accentColor;
-  }
-  // .choose__center
-  &__center {
-    grid-area: 1 / 2 / 4 / 3;
-    padding-top: 80px;
-  }
+
   // .choose__img
   &__img {
     max-height: 625px;
     max-width: 600px;
     width: 100%;
     height: 100%;
-  }
-  // .choose__box-right
-  &__box-right {
-  }
-}
-
-.choose {
-  // .choose__wrapper
-  &__wrapper {
-  }
-  // .choose__title
-  &__title {
-  }
-  // .choose__title-span
-  &__title-span {
-  }
-  // .choose__grid
-  &__grid {
-  }
-  // .choose__list
-  &__list {
-  }
-  // .choose__item
-  &__item {
-  }
-  // .choose__item1
-  &__item1 {
-  }
-  // .choose__subtitle
-  &__subtitle {
-  }
-  // .choose__text
-  &__text {
-  }
-  // .choose__span
-  &__span {
-  }
-  // .choose__item2
-  &__item2 {
-  }
-  // .choose__item3
-  &__item3 {
-  }
-  // .choose__img
-  &__img {
-  }
-  // .choose__item4
-  &__item4 {
-  }
-  // .choose__item5
-  &__item5 {
-  }
-  // .choose__item6
-  &__item6 {
   }
 }

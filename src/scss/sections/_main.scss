@@ -9,7 +9,7 @@
   &__box-content {
     @include flex(center, $flex-direction: column);
     margin: 0 auto 320px;
-    max-width: 534px;
+
     position: relative;
     &::before,
     &::after {
@@ -27,18 +27,12 @@
   }
   // .main__text
   &__text {
-    font-weight: 350;
-    font-size: 19px;
-    line-height: 28px;
     text-align: center;
 
     text-transform: uppercase;
 
     color: #828282;
-    @include media(max, xl) {
-      font-size: 14px;
-      line-height: 20px;
-    }
+
     &--letter {
       letter-spacing: 0.4em;
     }
@@ -49,9 +43,6 @@
   }
   // .main__title
   &__title {
-    font-family: "Mak";
-
-    font-weight: 300;
     font-size: 128px;
     line-height: 100%;
 
@@ -65,19 +56,28 @@
     @include media(max, xl) {
       font-size: 100px;
     }
+    @include media(max, lg) {
+      font-size: 80px;
+    }
+    @include media(max, sm) {
+      font-size: 60px;
+    }
   }
 
-  // .main__span
-  &__span {
-    color: $accentColor;
+  // .main__box-wrap
+  &__box-wrap {
+    position: relative;
   }
+
   // .main__box-video
   &__box-video {
-    @include pos(absolute, $top: 63%, $left: 50%);
+    @include pos(absolute, $bottom: 140%, $left: 50%);
     transform: translateX(-50%);
 
     width: 100%;
+    max-height: 684px;
   }
+
   // .main__btn
   &__btn {
     width: 220px;
@@ -96,23 +96,22 @@
     text-transform: uppercase;
 
     color: #fff;
+    z-index: 1;
 
-    @include pos(absolute, $top: -8%, $right: 9%);
-    @include media (max, xl) {
-      top: -6%;
-    }
+    @include pos(absolute, $top: -14%, $right: 9%);
+   
     @include media(max, lg) {
       @include wh(190px);
       font-size: 16px;
-      top: 0%;
     }
-    @include media (max, md) {
-      top: 10%;
+    @include media(max, md) {
       @include wh(150px);
       font-size: 14px;
     }
-    @include media (max, sm) {
-      top: 12%;
+    @include media(max, sm) {
+      @include wh(100px);
+      padding: 10px;
+      font-size: 12px;
     }
   }
 
@@ -122,64 +121,31 @@
     position: relative;
     z-index: -1;
     padding: 510px 0 128px;
-    // top: -580px;
-    &::before {
-      @include pseudo;
-      @include wh(100%, 23px);
-      @include background(url("@img/icons/decor_line.svg"));
-      @include pos(absolute, $bottom: 0, $left: 0);
+    @include background(url("@img/icons/decor_line.svg"));
+    background-position: bottom;
+    background-size: 100% 23px;
+    @include media(max, lg) {
+      padding-top: 40%;
+    }
+    @include media(max, sm) {
+      padding-top: 25%;
+      padding-bottom: 10%;
     }
   }
   // .main__inner
   &__inner {
     @include flex(space-between);
     gap: 20px;
-  }
-  // .main__subtitle
-  &__subtitle {
-    font-family: "Mak";
-
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-
-    color: #ffffff;
-    position: relative;
-    @include media(max, xl) {
-      font-size: 35px;
-      line-height: 42px;
-    }
-    @include media(max, lg) {
-      font-size: 30px;
-      line-height: 36px;
-    }
-    @include media(max, md){
-      font-size: 25px;
-      line-height: 30px;
-    }
-
-    &::before {
-      @include pseudo;
-      @include wh(32px, 60px);
-      @include background(url("@img/icons/decor-white.svg"));
-      @include pos(absolute, $top: 18%, $left: -60px);
-      @include media(max, xl) {
-        display: none;
-      }
+    @include media(max, sm) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
   // .main__text-down
   &__text-down {
-    font-weight: 350;
-    font-size: 19px;
-    line-height: 28px;
-
-    color: #ffffff;
     max-width: 500px;
     @include media(max, xl) {
-      font-size: 14px;
-      line-height: 20px;
       max-width: 400px;
     }
     @include media(max, md) {

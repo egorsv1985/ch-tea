@@ -1,69 +1,54 @@
 .discount {
   position: relative;
 
-  
   padding-right: calc((100% - 1220px) / 2);
- 
-  .container {
-	padding: 60px 0 80px;
-    padding-left: calc((100% - 1266px) / 2);
-	max-width: unset;
-	background-color: $accentColor;
-	background-blend-mode: soft-light, normal;
 
+  .container {
+    padding: 60px 0 80px;
+    padding-left: calc((100% - 1266px) / 2);
+    max-width: unset;
+    background-color: $accentColor;
+    background-blend-mode: soft-light, normal;
   }
 
   &::before {
     @include pseudo;
-    @include wh(82%, 23px);
+    @include wh(100%, 23px);
     @include background(url("@img/icons/decor_line.svg"));
     @include pos(absolute, $bottom: 0, $left: 0);
   }
   &::after {
-   
     z-index: -1;
   }
   // .discount__wrapper
   &__wrapper {
-    @include flex($flex-direction: column);
     gap: 40px;
     padding: 0 105px 0 180px;
+    @include media(max, lg) {
+      padding: 0 40px 0 60px;
+    }
   }
   // .discount__box-content
   &__box-content {
     @include flex(space-between);
-	gap: 15px;
+    gap: 15px;
+    @include media (max, md) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   // .discount__title
   &__title {
-    font-family: "Mak";
-
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-
-    color: #fff;
-
     max-width: 365px;
-    position: relative;
-    &::before {
-      @include pseudo;
-      @include wh(32px, 60px);
-      @include background(url("@img/icons/decor-white.svg"));
-      @include pos(absolute, $top: 18%, $left: -60px);
-    }
   }
   // .discount__text
   &__text {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 31px;
-
-    color: #fff;
     max-width: 400px;
     align-self: flex-end;
+    @include media(max, lg) {
+      text-align: center;
+      align-self: unset;
+    }
   }
-  // .discount__form
-  &__form {
-  }
+  
 }

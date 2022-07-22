@@ -2,16 +2,18 @@
   position: relative;
 
   padding: 60px 0 80px;
-
+  @include media(max, lg) {
+    padding: 30px 0 40px;
+  }
   // .feedback__wrapper
   &__wrapper {
     position: relative;
-    @include flex(space-between, center);
+    @include flex(space-between, center, wrap, row);
     background-color: $accentColor;
     padding: 55px 60px 80px 125px;
-	@include media (max, lg){
-		padding-left: 40px;
-	}
+    @include media(max, lg) {
+      padding-left: 40px;
+    }
   }
   // .feedback__inner
   &__inner {
@@ -25,46 +27,23 @@
   }
   // .feedback__title
   &__title {
-    font-family: "Mak";
-
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-
-    color: #fff;
-
     max-width: 365px;
-
-    position: relative;
-    &::before {
-      @include pseudo;
-      @include wh(32px, 60px);
-      @include background(url("@img/icons/decor-white.svg"));
-      @include pos(absolute, $top: 18%, $left: -60px);
-	  @include media (max, lg) {
-		display: none;
-	  }
-    }
   }
   // .feedback__text
   &__text {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 31px;
-
-    color: #fff;
     max-width: 435px;
-	@include media(max, lg) {
-		max-width: 300px;
-	}
+    @include media(max, lg) {
+      max-width: 300px;
+    }
+    @include media(max, md) {
+      max-width: unset;
+      text-align: center;
+    }
   }
-  // .feedback__span
-  &__span {
-    font-weight: 700;
-  }
+
   // .feedback__form
   &__form {
-	align-items:flex-start;
+    align-items: flex-start;
     .form__btn {
       @include wh(275px, 60px);
       @include flex(center, center);
@@ -79,12 +58,20 @@
       font-size: 32px;
       line-height: 37px;
       top: 0;
+      @include media(max, md) {
+        font-size: 21px;
+        line-height: 31px;
+      }
     }
     .form__input {
       height: 55px;
       font-size: 32px;
       line-height: 37px;
       max-width: 306px;
+      @include media(max, md) {
+        font-size: 21px;
+        line-height: 31px;
+      }
     }
     .form__wrap {
       width: unset;
@@ -94,23 +81,21 @@
   // .feedback__box-img
   &__box-img {
     @include pos(absolute, $top: -70px, $right: 70px);
-	@include media (max, 1160px){
-		height: 100%;
-		top: -54px;
-	}
-	@include media (max, lg) {
-		right: 20px;
-	}
-	
+    @include media(max, 1160px) {
+      height: 100%;
+      top: -54px;
+    }
+    @include media(max, lg) {
+      right: 20px;
+    }
   }
   // .feedback__img
   &__img {
-	@include media (max, 1160px){
-		height: 110%;
-	}
-	@include media (max, md) {
-		display: none;
-	}
-	
+    @include media(max, 1160px) {
+      height: 110%;
+    }
+    @include media(max, md) {
+      display: none;
+    }
   }
 }

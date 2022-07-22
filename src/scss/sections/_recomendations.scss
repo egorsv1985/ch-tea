@@ -2,42 +2,26 @@
   position: relative;
  
   padding: 125px 0 120px;
+  @include media (max, lg) {
+    padding: 60px 0;
+  }
   // .recommendations__wrapper
   &__wrapper {
-    @include flex($flex-direction: column);
+   
     gap: 90px;
+    @include media (max, md) {
+      gap: 60px;
+
+    }
   }
   // .recommendations__title
   &__title {
-    font-family: "Mak";
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: center;
+    
     max-width: 390px;
     margin: 0 auto;
-    color: $accentColor;
+   
+  }
 
-    position: relative;
-    &::before {
-      @include pseudo;
-      @include wh(60px, 32px);
-      @include background(url("@img/icons/decor.svg"));
-      @include pos(absolute, $top: -60px, $left: 50%);
-      transform: translateX(-50%);
-    }
-    &::after {
-      @include pseudo;
-      @include wh(100px, 1px);
-      background-color: $accentColor;
-      @include pos(absolute, $bottom: -30px, $left: 50%);
-      transform: translateX(-50%);
-    }
-  }
-  // .recommendations__span-title
-  &__span-title {
-    color: $mainColor;
-  }
   // .recommendations__list
   &__list {
     @include flex(center, $flex-wrap: wrap);
@@ -55,7 +39,8 @@
 
     padding: 20px;
     @include media (max, 630px){
-      height: 240px;
+      height: 100%;
+      width: 100%;
     }
     &:nth-child(even) {
       margin-top: 40px;
@@ -69,6 +54,7 @@
   &__wrap {
     @include flex(space-between, $flex-direction: column);
     height: 100%;
+    gap: 20px;
   }
   // .recommendations__span
   &__span {
@@ -82,16 +68,10 @@
   }
   // .recommendations__text
   &__text {
-    font-weight: 350;
+   
     font-size: 18px;
     line-height: 27px;
 
-    /* Gray 2 */
-    color: $mainColor;
   }
-  // .recommendations__span-text
-  &__span-text {
-    color: $accentColor;
-    font-weight: 700;
-  }
+ 
 }
