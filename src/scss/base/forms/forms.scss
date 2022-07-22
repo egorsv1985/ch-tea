@@ -3,6 +3,9 @@
 .form {
   @include flex(space-between, center);
   gap: 20px;
+  @include media(max, 1060px){
+	flex-direction: column;
+  }
 
   // .form__wrap
   &__wrap {

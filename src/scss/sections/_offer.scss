@@ -41,7 +41,12 @@
   }
   // .offer__wrap
   &__wrap {
-    @include flex(space-between, center);
+    @include flex(space-between, center, wrap);
+
+	gap: 15px;
+	@include media (max, xl){
+		justify-content: center;
+	}
 	
   }
   // .offer__box-img

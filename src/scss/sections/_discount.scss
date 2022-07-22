@@ -1,8 +1,17 @@
 .discount {
   position: relative;
- 
-  padding: 60px 0 80px;
 
+  
+  padding-right: calc((100% - 1220px) / 2);
+ 
+  .container {
+	padding: 60px 0 80px;
+    padding-left: calc((100% - 1266px) / 2);
+	max-width: unset;
+	background-color: $accentColor;
+	background-blend-mode: soft-light, normal;
+
+  }
 
   &::before {
     @include pseudo;
@@ -11,24 +20,19 @@
     @include pos(absolute, $bottom: 0, $left: 0);
   }
   &::after {
-    @include pseudo;
-    @include wh(82%, 100%);
-    @include pos(absolute, $bottom: 0, $left: 0);
-
-    background-color: $accentColor;
-    background-blend-mode: soft-light, normal;
+   
     z-index: -1;
   }
   // .discount__wrapper
   &__wrapper {
     @include flex($flex-direction: column);
-	gap: 40px;
-	padding-right: 100px;
+    gap: 40px;
+    padding: 0 105px 0 180px;
   }
   // .discount__box-content
   &__box-content {
     @include flex(space-between);
-	
+	gap: 15px;
   }
   // .discount__title
   &__title {
@@ -56,8 +60,8 @@
     line-height: 31px;
 
     color: #fff;
-	max-width: 400px;
-	align-self: flex-end;
+    max-width: 400px;
+    align-self: flex-end;
   }
   // .discount__form
   &__form {
