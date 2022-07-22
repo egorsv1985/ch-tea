@@ -1,5 +1,4 @@
 .main {
-  
   padding-top: 100px;
   // .main__wrapper
   &__wrapper {
@@ -36,13 +35,17 @@
     text-transform: uppercase;
 
     color: #828282;
+    @include media(max, xl) {
+      font-size: 14px;
+      line-height: 20px;
+    }
     &--letter {
       letter-spacing: 0.4em;
     }
-	&--width{
-		max-width: 420px;
-		margin: 0 auto;
-	}
+    &--width {
+      max-width: 420px;
+      margin: 0 auto;
+    }
   }
   // .main__title
   &__title {
@@ -59,6 +62,9 @@
     -webkit-text-fill-color: transparent;
 
     margin: 20px 0;
+    @include media(max, xl) {
+      font-size: 100px;
+    }
   }
 
   // .main__span
@@ -67,9 +73,9 @@
   }
   // .main__box-video
   &__box-video {
-    @include pos (absolute, $top:44%, $left:50%);
+    @include pos(absolute, $top: 63%, $left: 50%);
     transform: translateX(-50%);
-    z-index: 2;
+
     width: 100%;
   }
   // .main__btn
@@ -89,37 +95,46 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #ffffff;
-	position: relative;
-	
-	z-index: 3;
-	margin: 0 110px 0 auto;
+    color: #fff;
 
+    @include pos(absolute, $top: -8%, $right: 9%);
+    @include media (max, xl) {
+      top: -6%;
+    }
+    @include media(max, lg) {
+      @include wh(190px);
+      font-size: 16px;
+      top: 0%;
+    }
+    @include media (max, md) {
+      top: 10%;
+      @include wh(150px);
+      font-size: 14px;
+    }
+    @include media (max, sm) {
+      top: 12%;
+    }
+  }
 
-  }
-  &__video {
-	position: relative;
-	top: -110px;
-	z-index: 2;
-  }
   // .main__wrap
   &__wrap {
     background-color: $accentColor;
     position: relative;
-	z-index: 1;
-	padding: 510px 0 128px;
-	// top: -580px;
-	&::before{
-		@include pseudo;
-		@include wh(100%, 23px);
-		@include background (url("@img/icons/decor_line.svg"));
-		@include pos(absolute, $bottom:0, $left:0);
-	}
+    z-index: -1;
+    padding: 510px 0 128px;
+    // top: -580px;
+    &::before {
+      @include pseudo;
+      @include wh(100%, 23px);
+      @include background(url("@img/icons/decor_line.svg"));
+      @include pos(absolute, $bottom: 0, $left: 0);
+    }
   }
   // .main__inner
-	&__inner {
-		@include flex (space-between);
-	}
+  &__inner {
+    @include flex(space-between);
+    gap: 20px;
+  }
   // .main__subtitle
   &__subtitle {
     font-family: "Mak";
@@ -130,13 +145,27 @@
 
     color: #ffffff;
     position: relative;
+    @include media(max, xl) {
+      font-size: 35px;
+      line-height: 42px;
+    }
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @include media(max, md){
+      font-size: 25px;
+      line-height: 30px;
+    }
+
     &::before {
       @include pseudo;
       @include wh(32px, 60px);
       @include background(url("@img/icons/decor-white.svg"));
       @include pos(absolute, $top: 18%, $left: -60px);
-      
-	  
+      @include media(max, xl) {
+        display: none;
+      }
     }
   }
 
@@ -147,10 +176,14 @@
     line-height: 28px;
 
     color: #ffffff;
-	max-width: 500px;
+    max-width: 500px;
+    @include media(max, xl) {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 400px;
+    }
+    @include media(max, md) {
+      max-width: 300px;
+    }
   }
-  
-	
-
-
 }
