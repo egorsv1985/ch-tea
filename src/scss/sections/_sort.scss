@@ -1,28 +1,27 @@
 .sort {
   position: relative;
   padding: 120px 0 60px;
-  @include media (max, lg) {
+  @include media(max, lg) {
     padding: 60px 30px;
   }
- 
- 
+
   // .sort__box-content
   &__box-content {
     @include flex(space-between, center);
     position: relative;
-    @include media(max, xl){
+    @include media(max, xl) {
       flex-direction: column;
       gap: 15px;
     }
     &:first-child {
       margin-bottom: 60px;
-      @include media(max, xl){
+      @include media(max, xl) {
         margin-bottom: 40px;
       }
     }
     &:nth-child(2) {
       margin-bottom: 40px;
-      @include media(max, xl){
+      @include media(max, xl) {
         margin-bottom: 20px;
       }
       &::before {
@@ -30,7 +29,7 @@
         @include wh(120px);
         @include background(url("@img/icons/decor-corner.svg"));
         @include pos(absolute, $bottom: 0, $right: 0);
-        @include media (max, sm){
+        @include media(max, sm) {
           display: none;
         }
       }
@@ -39,12 +38,11 @@
       .sort__wrap {
         margin-right: unset;
         margin-left: 75px;
-        @include media(max, xl){
+        @include media(max, xl) {
           margin-left: unset;
         }
       }
       .sort__box-img {
-       
         &::before {
           @include pseudo;
           @include wh(398px);
@@ -52,7 +50,7 @@
           @include pos(absolute, $top: 50%, $left: -200px);
           transform: translateY(-50%);
           z-index: 1;
-          @include media(max, md){
+          @include media(max, md) {
             display: none;
           }
         }
@@ -68,13 +66,13 @@
   }
   // .sort__title
   &__title {
-  text-align: left;
+    text-align: left;
     max-width: 465px;
 
     position: relative;
     @include media(max, lg) {
       text-align: center;
-    } 
+    }
 
     &::before {
       @include pseudo;
@@ -82,7 +80,7 @@
       @include background(url("@img/icons/decor.svg"));
       @include pos(absolute, $top: 50%, $left: -70px);
       transform: translateY(-50%) rotate(270deg);
-      @include media (max, lg) {
+      @include media(max, lg) {
         display: none;
       }
     }
@@ -93,12 +91,11 @@
   }
   // .sort__text
   &__text {
-  
     font-size: 18px;
     line-height: 150%;
 
     max-width: 560px;
-    @include media(max, xl){
+    @include media(max, xl) {
       text-align: center;
     }
 
@@ -107,18 +104,16 @@
       line-height: 28px;
       max-width: 495px;
       align-self: flex-end;
-      @include media(max, xl){
+      @include media(max, xl) {
         align-self: unset;
       }
     }
   }
 
- 
-
   // .sort__box-img
   &__box-img {
     position: relative;
-
+    order: -1;
     &::before {
       @include pseudo;
       @include wh(398px);
@@ -126,7 +121,7 @@
       @include pos(absolute, $top: 50%, $right: -200px);
       transform: translateY(-50%);
       z-index: 1;
-      @include media(max, md){
+      @include media(max, md) {
         display: none;
       }
     }
@@ -149,7 +144,6 @@
   }
   // .sort__subtitle
   &__subtitle {
-   
     font-size: 24px;
     line-height: 28px;
 
@@ -173,9 +167,8 @@
 
     color: $primaryColor;
     margin-top: 30px;
-    @include media(max, xl){
+    @include media(max, xl) {
       margin-bottom: 50px;
-
     }
   }
 }

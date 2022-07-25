@@ -32,9 +32,7 @@
     }
   }
 
-  // .footer__logo
-  &__logo {
-  }
+ 
   // .footer__box-content
   &__box-content {
     @include flex($flex-direction: column);
@@ -91,17 +89,13 @@
 
     color: $mainColor;
   }
-  // .footer__nav
-  &__nav {
-  }
+  
   // .footer__list
   &__list {
     @include flex($flex-wrap: wrap, $flex-direction: column);
     gap: 15px;
   }
-  // .footer__item
-  &__item {
-  }
+
   // .footer__link
   &__link {
     font-weight: 350;
@@ -145,9 +139,7 @@
       z-index: -1;
     }
   }
-  // .footer__img
-  &__img {
-  }
+  
   // .footer__bottom
   &__bottom {
     .footer__small {
