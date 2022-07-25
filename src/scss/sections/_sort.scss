@@ -153,7 +153,8 @@
   // .sort__button
   &__button {
     @include flex(center, center);
-    @include wh(212px, 60px);
+    @include wh(100%, 60px);
+    max-width: 212px;
 
     background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
     border-radius: 1000px;
@@ -169,6 +170,10 @@
     margin-top: 30px;
     @include media(max, xl) {
       margin-bottom: 50px;
+    }
+    @include media(max, sm) {
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 }

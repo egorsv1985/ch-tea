@@ -48,7 +48,8 @@
   &__form {
     align-items: flex-start;
     .form__btn {
-      @include wh(275px, 60px);
+      @include wh(100%, 60px);
+      max-width: 275px;
       @include flex(center, center);
 
       background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
@@ -56,6 +57,10 @@
 
       font-size: 17px;
       line-height: 20px;
+      @include media(max, sm){
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
     .form__label {
       font-size: 32px;
