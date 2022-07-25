@@ -1457,16 +1457,28 @@ textarea {
     width: 100%;
   }
 }
-.feedback__form .form__input {
+@media only screen and (max-width: 575px) {
+  .feedback__form .form__label {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+.feedback__form .form__input::placeholder {
   height: 55px;
   font-size: 32px;
   line-height: 37px;
   max-width: 306px;
 }
-@media only screen and (max-width: 767px) {
-  .feedback__form .form__input {
+@media only screen and (max-width: 1023px) {
+  .feedback__form .form__input::placeholder {
     font-size: 21px;
     line-height: 31px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .feedback__form .form__input::placeholder {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 .feedback__form .form__wrap {
