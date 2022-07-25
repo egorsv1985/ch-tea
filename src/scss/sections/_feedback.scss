@@ -73,15 +73,26 @@
         width: 100%;
        
       }
+      @include media(max, sm) {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
-    .form__input {
+    .form__input::placeholder {
       height: 55px;
       font-size: 32px;
       line-height: 37px;
       max-width: 306px;
-      @include media(max, md) {
+      @include media(max, lg) {
+       
         font-size: 21px;
         line-height: 31px;
+       
+       
+      }
+      @include media(max, sm) {
+        font-size: 18px;
+        line-height: 25px;
       }
     }
     .form__wrap {
