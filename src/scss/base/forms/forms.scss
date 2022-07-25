@@ -13,6 +13,9 @@
     position: relative;
     width: 76%;
     padding-bottom: 20px;
+    @include media(max, 500px) {
+      width: 100%;
+    }
   }
 
   // .form__input
@@ -37,8 +40,8 @@
       height: 60px;
     }
     @include media(max, sm) {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 22px;
     }
 
     &:focus-visible,
@@ -68,9 +71,7 @@
     line-height: 47px;
     width: 100%;
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
+    
 
     color: #fff;
     position: absolute;
