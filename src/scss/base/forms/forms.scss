@@ -68,6 +68,9 @@
     line-height: 47px;
     width: 100%;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 
     color: #fff;
     position: absolute;
