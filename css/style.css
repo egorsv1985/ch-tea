@@ -423,14 +423,16 @@ h6 {
   font-weight: 400;
   font-size: 40px;
   line-height: 47px;
+  width: 100%;
+  text-align: center;
   color: #fff;
   position: absolute;
-  top: 12px;
   left: 0;
   transition: 0.5s;
 }
 @media only screen and (max-width: 1023px) {
   .form__label {
+    top: 25px;
     font-size: 30px;
     line-height: 35px;
   }
@@ -1413,10 +1415,13 @@ textarea {
   line-height: 37px;
   top: 0;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
   .feedback__form .form__label {
+    top: 20px;
     font-size: 21px;
     line-height: 31px;
+    width: 100%;
+    text-align: center;
   }
 }
 .feedback__form .form__input {
