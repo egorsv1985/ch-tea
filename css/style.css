@@ -375,6 +375,11 @@ h6 {
   width: 76%;
   padding-bottom: 20px;
 }
+@media only screen and (max-width: 500px) {
+  .form__wrap {
+    width: 100%;
+  }
+}
 .form__input {
   border-bottom: 1px solid #fff;
   font-family: "TenorSans";
@@ -397,8 +402,8 @@ h6 {
 }
 @media only screen and (max-width: 575px) {
   .form__input {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 .form__input:focus-visible, .form__input:focus, .form__input:active {
@@ -1235,6 +1240,11 @@ textarea {
     padding: 0 40px 0 60px;
   }
 }
+@media only screen and (max-width: 575px) {
+  .discount__wrapper {
+    padding: 0 20px;
+  }
+}
 .discount__box-content {
   display: flex;
   justify-content: space-between;
@@ -1421,7 +1431,6 @@ textarea {
     font-size: 21px;
     line-height: 31px;
     width: 100%;
-    text-align: center;
   }
 }
 .feedback__form .form__input {
