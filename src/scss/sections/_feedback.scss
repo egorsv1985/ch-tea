@@ -58,10 +58,14 @@
       font-size: 32px;
       line-height: 37px;
       top: 0;
-      @include media(max, md) {
+      @include media(max, lg) {
+        top: 20px;
         font-size: 21px;
         line-height: 31px;
+        width: 100%;
+        text-align: center;
       }
+     
     }
     .form__input {
       height: 55px;
