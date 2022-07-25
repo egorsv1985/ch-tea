@@ -1354,6 +1354,11 @@ textarea {
     font-size: 12px;
   }
 }
+@media only screen and (max-width: 575px) {
+  .offer__img {
+    width: 100%;
+  }
+}
 
 .feedback {
   position: relative;
@@ -1383,6 +1388,11 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+@media only screen and (max-width: 1023px) {
+  .feedback__inner {
+    align-items: center;
+  }
 }
 .feedback__box-content {
   display: flex;
