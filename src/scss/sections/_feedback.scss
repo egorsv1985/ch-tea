@@ -19,6 +19,9 @@
   &__inner {
     @include flex($flex-direction: column);
     gap: 40px;
+    @include media(max, lg) {
+      align-items: center;
+    }
   }
   // .feedback__box-content
   &__box-content {
